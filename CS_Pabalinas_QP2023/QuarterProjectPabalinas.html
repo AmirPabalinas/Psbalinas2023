@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CookingCraze.com</title>
+    <style>
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        nav {
+            background-color: #555;
+            padding: 10px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav ul li {
+            display: inline;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        nav ul .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        
+        nav ul .search-bar input[type="text"] {
+            padding: 5px;
+            border: 1px solid #888;
+            border-radius: 5px;
+        }
+        
+        nav ul .search-bar button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul .search-bar button:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Main content container styling with background image */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-image: url(https://images.squarespace-cdn.com/content/v1/53b839afe4b07ea978436183/1daa9086-0f1d-4d65-86b5-4a15a36d08d4/traditional-food-around-the-world-Travlinmad.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative; 
+        }
+        
+        .divider {
+            border-top: 1px solid #ccc;
+            margin-top: 50vh; 
+            margin-bottom: 30px; 
+        }
+        
+        .headline {
+            position: absolute;
+            top: 0; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            color: #fff; 
+            font-size: 36px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .bottom-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .section {
+            width: 48%;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .button {
+            display: block;
+            margin-top: 20px; 
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        .section a.button {
+            background-color: #e74c3c; 
+        }
+
+        .section a.button:hover {
+            background-color: #c0392b; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CookingCraze.com</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li class="logo">
+                <img src="" alt="Logo">
+                <a href="#">Home</a>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="search-bar">
+                <input type="text" placeholder="Search">
+                <button type="submit">Search</button>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="divider"></div>
+        
+        <h2 class="headline">Lets Learn to Cook!</h2> <!-- Headline within the background image -->
+        
+        <div class="bottom-section">
+            <div class="section">
+                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/02/25/0/FNK_Chana-Masala_H2_s4x3.jpg.rend.hgtvcom.826.620.suffix/1614271965516.jpeg" width="400">
+                <a class="button" href="pageAA.html">Recipes</a>
+            </div>
+            <div class="section">
+                <img src="https://img.freepik.com/premium-photo/portrait-smiling-black-man-cutting-vegetables-while-cooking-cozy-kitchen-copy-space_236854-36995.jpg" width="400">
+                <a class="button" href="pageCC.html">Learn How to Cook</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
