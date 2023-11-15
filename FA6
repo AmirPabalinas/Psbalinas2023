@@ -73,7 +73,7 @@
             width: 16%;
             padding-bottom: 4%;
             height: 4%;
-            border: 3px solid black;
+            border: 5px solid black;
         }
         #div1:target{
             background: grey;
@@ -100,10 +100,7 @@
         <div>
             <a id = "a1" href = "#div1"> First Link</a>  
             <a id = "a2" href = "#div2"> Second Link</a>
-            <br>
-            <br>
-            <br>
-            <br>
+           
             <div id = "div1"> Div 1 here</div>
             <div id = "div2"> Div 2 here</div>
         </div>
