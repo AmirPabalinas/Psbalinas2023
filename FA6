@@ -76,7 +76,7 @@
             border: 3px solid black;
         }
         #div1:target{
-            background: red;
+            background: grey;
 
         }
 
