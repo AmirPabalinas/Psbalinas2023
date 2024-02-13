@@ -1,0 +1,11 @@
+<html>
+<body>
+    <H1>Area of a Triangle</H1>
+        <script>
+        var base = prompt("Input a number for your base: ");
+        var height = prompt("Input a number for your height: ");
+        var area = (parseInt(base) * parseInt(height) / 2)
+        alert(area);
+    </script>
+</body>
+</html>
