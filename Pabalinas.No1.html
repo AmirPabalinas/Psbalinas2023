@@ -32,13 +32,13 @@
         <script>
             let total = 0;
 
-            //get the total payment and display in h3.
-            function totalP(price) {
-            total += price;
+            
+            function totalPrice(initialPrice) {
+            total += initialPrice;
             document.getElementById("total").innerHTML = total; 
             }
             
-            //clears the total payment and display 0 in h3.
+            
             function clearP(){
           total = 0;     
           document.getElementById("total").innerHTML = total;
