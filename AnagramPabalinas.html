@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta sharset="UTF-8"/>
+	<title> Anagrams</title>
+</head>
+<body>
+	<script>
+		function anagram(input1, input2){
+		let str1 = input1.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+		let str2 = input2.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+
+		let sortedStr1 = str1.split('').sort().join('');
+		let sortedStr2 = str2.split('').sort().join('');
+		
+		if (sortedStr1 === sortedStr2) {
+			return true;
+		} else {
+			return false;
+		}
+		}
+ 
+		let input1 = prompt("Enter First word/phrase");
+		let input2 = prompt("Enter second word/phrase");
+ 
+		if (anagram(input1, input2)){
+			alert("these words are anagrams of each other");
+		} else {
+			alert("these two words are not anagrams of each other");
+		}
+	</script>
+ </body>
+ </html>
+  
+ 
+ 
+
+
+ 
+ 
+
