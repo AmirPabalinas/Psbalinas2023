@@ -9,7 +9,6 @@
             var name1 = name1Input.value.trim().toUpperCase().replace(/[^a-zA-Z]/g, '');
             var name2 = name2Input.value.trim().toUpperCase().replace(/[^a-zA-Z]/g, '');
 
-            // Remove duplicate letters
             name1 = name1.split('').filter(function(item, index, self) {
                 return self.indexOf(item) === index;
             }).join('');
@@ -17,13 +16,10 @@
                 return self.indexOf(item) === index;
             }).join('');
 
-            // Display the input names
             document.getElementById('name').innerText = name1Input.value + " & " + name2Input.value;
 
-            // Count total unique characters (excluding special characters)
+            
             var totalChars = (name1 + name2).replace(/[^a-zA-Z]/g, '').length;
-
-            // Calculate FLAMES result
             var flamesChars = 'FLAMES'.split('');
             var resultIndex = (totalChars - 1) % flamesChars.length;
             var resultMeaning = {
@@ -35,7 +31,6 @@
                 'S': 'Sweethearts'
             };
 
-            // Display the result
             document.getElementById('result').innerText = resultMeaning[flamesChars[resultIndex]];
         }
         </script>
