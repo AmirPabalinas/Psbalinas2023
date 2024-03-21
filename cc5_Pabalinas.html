@@ -1,48 +1,58 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Modified FLAMES</title>
-        <script>
-        function flames() {
-            var name1Input = document.getElementById('name1');
-            var name2Input = document.getElementById('name2');
-            var name1 = name1Input.value.trim().toUpperCase().replace(/[^a-zA-Z]/g, '');
-            var name2 = name2Input.value.trim().toUpperCase().replace(/[^a-zA-Z]/g, '');
-
-            name1 = name1.split('').filter(function(item, index, self) {
-                return self.indexOf(item) === index;
-            }).join('');
-            name2 = name2.split('').filter(function(item, index, self) {
-                return self.indexOf(item) === index;
-            }).join('');
-
-            document.getElementById('name').innerText = name1Input.value + " & " + name2Input.value;
-
-            
-            var totalChars = (name1 + name2).replace(/[^a-zA-Z]/g, '').length;
-            var flamesChars = 'FLAMES'.split('');
-            var resultIndex = (totalChars - 1) % flamesChars.length;
-            var resultMeaning = {
-                'F': 'Friends',
-                'L': 'Lovers',
-                'A': 'Acquaintances',
-                'M': 'Marriage',
-                'E': 'Enemies',
-                'S': 'Sweethearts'
-            };
-
-            document.getElementById('result').innerText = resultMeaning[flamesChars[resultIndex]];
-        }
-        </script>
+        <title>
+            Coding Challenge 5
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+        </style>
     </head>
     <body>
-        <h2>Modified FLAMES</h2>
-        <label for="name1">Enter Name 1: </label>
-        <input type="text" id="name1" placeholder="Name 1"><br><br>
-        <label for="name2">Enter Name 2: </label>
-        <input type="text" id="name2" placeholder="Name 2"><br><br>
-        <button onclick="flames()">Calculate FLAMES</button><br><br>
+        <h1> Modified FLAMES </h1>
+
+        <button onclick="flames()">Match Names</button>
         <h3 id="name"></h3>
+
+        <h4>FLAMES Result:</h4>
         <h3 id="result"></h3>
+
+        <script>
+            function flames(){
+                let name1 = prompt("Enter name 1.");
+                let name2 = prompt("Enter name 2.");
+
+                //clean user-inputted names.
+                while((name1.includes(" ")) || (name2.includes(" ")) || (/[^a-zA-Z0-9 ]/.test(name1)) || (/[^a-zA-Z0-9 ]/.test(name2))) {
+                    name1 = name1.replace(" ", "");
+                    name2 = name2.replace(" ", "");
+                    name1 = name1.replace(/[^a-zA-Z0-9 ]/, "");
+                    name2 = name2.replace(/[^a-zA-Z0-9 ]/, "");
+                }
+                document.getElementById("name").innerHTML = name1 + " and " + name2;
+
+                let namesLength = (name1 + name2).length;
+                let flameIndex = namesLength % 6;
+
+                if(flameIndex === 0) {
+                    document.getElementById("result").innerHTML = "S-sweethearts"; 
+                } else if(flameIndex === 1) {
+                    document.getElementById("result").innerHTML = "F-friends";
+                } else if(flameIndex === 2) {
+                    document.getElementById("result").innerHTML = "L-lovers";
+                } else if(flameIndex === 3) {
+                    document.getElementById("result").innerHTML = "A-Acquaintances";
+                } else if(flameIndex === 4) {
+                    document.getElementById("result").innerHTML = "M-marriage";
+                } else if(flameIndex === 5) {
+                    document.getElementById("result").innerHTML = "E-enemies";
+                } else if(flameIndex === 6) {
+                    document.getElementById("result").innerHTML = "S-sweethearts";
+                }
+            }
+        </script>
     </body>
 </html>
