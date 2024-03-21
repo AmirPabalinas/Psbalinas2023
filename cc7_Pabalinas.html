@@ -29,21 +29,21 @@
 
 
 <script>
-    // Function to generate a random OTP
+    
     function generateOTP() {
         var otp = Math.floor(100000 + Math.random() * 900000);
         document.getElementById('otp').innerText = otp;
     }
 
-    // Function to handle the Enter OTP button click
+    
     function enterOTP() {
         var enteredOTP = prompt("Enter the OTP:");
         var displayedOTP = document.getElementById('otp').innerText;
         if (enteredOTP === displayedOTP) {
-            // OTP is correct, redirect to a website
-            window.open("https://youtube.com");
+           
+            window.open("https://chat.openai.com/auth/login");
         } else {
-            // OTP is incorrect, display appropriate message
+           
             alert("Incorrect OTP! Please try again.");
         }
     }
