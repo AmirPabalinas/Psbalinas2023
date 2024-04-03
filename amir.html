@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplication Table Generator</title>
+</head>
+<body>
+  <h1>Multiplication Table Generator</h1>
+  <p>Enter the number of rows and columns for the multiplication table:</p>
+  <button onclick="generateTable()">Generate Table</button>
+  <br><br>
+  <div id="table-container"></div>
+
+  <script>
+  function generateTable() {
+    let n = parseInt(prompt("Enter the number of rows (between 2 and 10):"));
+    let m = parseInt(prompt("Enter the number of columns (between 2 and 10):"));
+
+    if (isNaN(n) || isNaN(m) || n < 2 || n > 10 || m < 2 || m > 10) {
+      alert("N and m must be integers between 2 and 10.");
+      return;
+    }
+
+    let table = "<table>";
+    for (let i=1; i<=n; i++) {
+      table += "<tr>";
+      for (let j=1; j<=m; j++) {
+        table += "<td>" + (i * j) + "</td>";
+      }
+      table += "</tr>";
+    }
+    table += "</table>";
+
+    document.getElementById("table-container").innerHTML = table;
+  }
+  </script>
+</body>
+</html>
+
