@@ -3,12 +3,19 @@
 <head>
   <title>Multiplication Table Generator</title>
 </head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
 <body>
   <h1>Multiplication Table Generator</h1>
   <p>Enter the number of rows and columns for the multiplication table:</p>
   <button onclick="generateTable()">Generate Table</button>
   <br><br>
   <div id="table-container"></div>
+
 
   <script>
   function generateTable() {
@@ -35,4 +42,3 @@
   </script>
 </body>
 </html>
-
